@@ -13,7 +13,7 @@ Use this reference before rendering HTML. Include every mandatory row in the rev
 | Screening | sanctions, PEP/RCA, adverse media, and whether screening was performed or only declaration data was observed |
 | Tax residency | jurisdiction(s), TIN/registration number, source |
 | Expected activity | purpose, products/services, expected transaction count/volume/value where available |
-| Arithmetic check | `review-bundle/arithmetic-check.md` recomputes every report number and key figure |
+| Arithmetic check | the arithmetic check in `review-bundle/analysis.md` recomputes every report number and key figure |
 | Absence search trail | every `not observed` / `not provided` / `not performed` row states where it was looked for |
 | Gap materiality | conflicts/gaps table includes amount-at-stake or affected-analysis column and is ordered by factual materiality |
 | Document freshness | expiry dates and dated-document age where extractable |

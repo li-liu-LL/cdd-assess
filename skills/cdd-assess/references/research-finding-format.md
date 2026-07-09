@@ -5,7 +5,7 @@ Use this format to persist reusable regulatory grounding. Research findings shou
 File name:
 
 ```text
-source-research/0001-short-topic.md
+knowledge/research/0001-short-topic.md
 ```
 
 Template:

@@ -19,7 +19,7 @@ Every corroboration statement carries its numbers: the declared amount, the inde
 
 ## Mechanical Arithmetic Check
 
-Before the self-check can pass, recompute every numeric claim mechanically and record the result in `review-bundle/arithmetic-check.md`. Cover at minimum:
+Before the self-check can pass, recompute every numeric claim mechanically and record the result in the `## Arithmetic check` section of `review-bundle/analysis.md`. Cover at minimum:
 
 - component sums for SOW, SOF, net worth, assets, liabilities, capital, and declared funding
 - coverage ratios and percentages, including independently evidenced amounts versus declared amounts
@@ -29,7 +29,7 @@ Before the self-check can pass, recompute every numeric claim mechanically and r
 - FX conversions and threshold comparisons, with rate, source or assumption, date, and purpose
 - key-figures band metrics, conflict counts, gap counts, source counts, and page/report counts if shown
 
-Use a scratch script when the runtime supports one. The script can be temporary, but the inputs, formulae, and output must be saved or pasted into `arithmetic-check.md`. If no script runtime is available, create a row-by-row arithmetic table and mark it as manual. A high-precision report whose numbers are not mechanically checked has failed composition, even if the prose reads well.
+Use a scratch script when the runtime supports one. The script can be temporary, but the inputs, formulae, and output must be saved or pasted into the arithmetic-check section of `analysis.md`. If no script runtime is available, create a row-by-row arithmetic table and mark it as manual. A high-precision report whose numbers are not mechanically checked has failed composition, even if the prose reads well.
 
 ## FX And Threshold Orientation
 

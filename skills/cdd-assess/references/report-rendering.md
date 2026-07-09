@@ -13,7 +13,7 @@ Use `assets/report-template.html` and `assets/report.css` as the default interna
 
 Every report carries, in addition to its sections:
 
-- **Compact dossier header**: logo, classification, title, and a metadata grid that fits above the fold on screen and within the first half page in print. The header never consumes a full printed page.
+- **Compact dossier header**: logo, classification, title, and a metadata grid that fits above the fold on screen and within the first half page in print. The header never consumes a full printed page. If the operating context was incomplete and drafting proceeded on officer-directed working assumptions, the header carries a context-status line naming the assumed frame.
 - **Table of contents**: section numbers and titles, immediately after the header.
 - **Key-figures band** at the top of the reviewer brief: four to six quantified figures a reviewer needs first — declared net worth or net assets, independently corroborated amount and coverage, source counts split independent versus customer representation, conflicts found, and human-verification items.
 - **Exhibit register**: a table in the Evidence Exhibits section listing every exhibit with number, title, sources, and artifact type. Exhibits are numbered `Exhibit 1..n` and cited by number from the body.
@@ -26,6 +26,9 @@ Every report carries, in addition to its sections:
 - Every figure carries the academic caption apparatus, in this order: numbered kicker (`Figure n`, automatic via CSS), a short bold headline stating the figure's finding, a subtitle giving units and scope, the artifact itself, then a `figcaption` with a **Notes:** line (how to read it, assumptions, limits) and a **Source:** line (field-level citations, extraction method, confidence). Body text cites figures by number.
 - Follow the data-ink discipline: no enclosing boxes, backgrounds, or decorative borders around charts; hairline rules only; light or no gridlines; values labelled directly on marks instead of axes where the data is sparse; every drop of non-data ink must earn its place.
 - Figures encode values as visible text inside the SVG so the figure survives grayscale print and screen readers; color differences are reinforced by labels or patterns.
+- **A bar is a magnitude.** Never draw a bar, wedge, or area for `not observed`, `not applicable`, or a placeholder value. When a declared amount is absent, the corroboration figure degrades to the evidenced-baseline bars only, with a text line stating that no declared amount was observed — or the figure is replaced by a stat line. A full-width bar labelled "not observed" misreads as a huge value.
+- **Diagram layout rules** (ownership maps, flow diagrams): labels never sit on top of edges or other labels — offset them and connect with a short leader line; minimum one text-line height of clear space between nodes; edge labels shorter than the gap they annotate, else move the detail into the node; the customer/root node carries its name, never a generic placeholder; test at three or more nodes per tier before accepting the layout. If a structure is too deep to draw legibly, draw the top layers and put the full chain in the ownership table.
+- **Source lines cite evidence, never tooling.** Figure and exhibit `Source:` lines reference client materials and persisted research findings at field level. Scripts, review-bundle paths, and pipeline files are not sources and never appear in a report.
 - Screenshots and crops sit near the facts they support and cite source, page, and extraction method. If a critical exhibit has no visual artifact, record `No visual evidence generated` with the reason.
 
 ## Presentation Rules
@@ -81,8 +84,8 @@ Inspect the PDF for: missing page numbers, truncated table columns, rendered scr
 - Headings, key figures, captions, and short paragraphs wrap cleanly without orphaned one-word lines or clipped text.
 - Numeric comparisons use stable tabular numerals and align consistently across tables, figures, and the key-figures band.
 - Screenshots and document crops have neutral inset outlines, nearby extracted text, captions, and field-level sources.
-- Table of contents, key-figures band, and exhibit register are present and consistent with the body.
-- Every exhibit has source file, page/section, extraction method, and confidence.
+- Table of contents, key-figures band, and exhibit register are present and consistent with the body; the register row count equals the number of figures rendered (this count belongs in the arithmetic check).
+- Every exhibit has source file, page/section, extraction method, and confidence, and no `Source:` line cites a script or bundle path.
 - Mandatory coverage rows appear even when the value is `not observed`.
 - The factual record remains understandable without reading appendices.
 - Major sections meet the composition standard: narrative that reaches triangulation and residual uncertainty, not only tables.

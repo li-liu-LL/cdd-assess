@@ -23,6 +23,7 @@ Never trust parametric knowledge for regulatory requirements. Use supplied compl
 - `references/principles.md`: mission, philosophy, and report judgment principles.
 - `references/research-finding-format.md`: persisted regulatory research format.
 - `references/report-rendering.md`: HTML rendering and quality checks.
+- `references/risk-module.md`: optional draft risk assessment under an entity-supplied methodology.
 
 Read the relevant reference only when performing that part of the workflow.
 
@@ -40,6 +41,12 @@ Turn messy onboarding materials into a review-grade factual record: sourced, str
 - **Primary sources over memory**: when compliance grounding is missing or stale, research official sources and persist reusable findings.
 - **Beauty serves judgment**: layout, tables, charts, screenshots, and citations exist to reduce reviewer effort.
 - **Human authority stays outside the report**: the report supports review; it does not recommend decisions or actions.
+
+## Authorship Boundary
+
+Reports are **authored from evidence, never generated from configured data**. Scripts and tools are allowed for exactly three jobs: extracting text/images from materials, mechanically recomputing arithmetic, and rendering/render-checking HTML. Everything else — the factual record, derivations, consistency sweep, narrative, observations, gaps, and the report HTML content — must be composed by the agent working from the extracted evidence.
+
+Do not write a generator script that holds case data and emits reports or review-bundle files. Not for "sample" reports, not for "template testing", not to batch multiple clients, not because the cases look similar. A script cannot notice an anomaly nobody configured into it, so its output is a template demo, not an assessment — if such a demo is ever produced anyway, its cover and version history must label it `template demo — not an assessment` and it does not count as a report for any purpose in this skill. Every analytical sentence must trace to extracted evidence through the review bundle, and report sources must cite client materials and persisted research only — never pipeline files, scripts, or bundle paths.
 
 ## Workflow
 
@@ -62,7 +69,7 @@ You may create the workspace, inventory materials, and propose grouping before t
 
 Use a stateful workspace. Read `references/workspace-format.md` before creating or changing the structure.
 
-Preserve the original source drop untouched. If materials are mixed across multiple clients, infer a grouping plan using folder names, filenames, extracted names, registration numbers, form types, and document text. Ask for confirmation before copying materials into normalized client packs. Put ambiguous files in `unassigned/`.
+Preserve the original source drop untouched. If materials are mixed across multiple clients, infer a grouping plan using folder names, filenames, extracted names, registration numbers, form types, and document text. Ask for confirmation before copying materials into normalized client packs. Put ambiguous files in `source-drop/unassigned/`.
 
 For each confirmed client pack, identify the customer type before analysis: `individual`, `corporate`, or `unclear`. Ground individual clients under the individual factual record and corporate clients under the corporate factual record. If the type is unclear, block report drafting for that client pack until the ambiguity is resolved.
 
@@ -91,34 +98,28 @@ Required passes:
 - **Factual record pass**: classify customer type, then structure identity, entity, ownership, financial, document, and transaction facts under the individual or corporate record.
 - **Regulatory research pass**: ground applicable requirements and principles.
 - **Derivation pass**: derive SOF, SOW, net worth corroboration, UBO maps, conflicts, and estimates, with quantified coverage of declared versus independently evidenced amounts. For corporate ownership, document every intermediate entity and natural person down each ownership layer with per-layer evidence status.
-- **Arithmetic verification pass**: mechanically recompute every numeric claim that will appear in the report: totals, residuals, coverage ratios, FX conversions, ownership percentages, expected-activity arithmetic, source counts, conflict/gap counts, and key-figures metrics. Save the script output or table in `review-bundle/arithmetic-check.md`.
+- **Arithmetic verification pass**: mechanically recompute every numeric claim that will appear in the report: totals, residuals, coverage ratios, FX conversions, ownership percentages, expected-activity arithmetic, source counts, conflict/gap counts, and key-figures metrics. Save the script output or table in the arithmetic-check section of `review-bundle/analysis.md`.
 - **Consistency sweep**: cross-check every extracted value across documents (names and MRZ order, identifiers, dates, addresses, contact details, values, tenures) and record each check and anomaly per `references/report-composition.md`.
 - **Completeness pass**: apply `references/completeness-checklists.md`; include mandatory rows even when facts are `not observed`.
 - **Citation review pass**: verify every material fact and observation cites document plus page/section plus field or line, extraction method, and confidence.
 - **Narrative composition pass**: read `references/report-composition.md` and compose analytical prose that climbs the corroboration ladder for every material claim.
+- **Risk module pass** (only when enabled): apply `references/risk-module.md` — score strictly under the supplied methodology, factor by factor, from the factual record.
 - **Report critique pass**: check completeness, clarity, visual usefulness, print-stable presentation, and no decision/action language.
 
 For every extracted or derived item, record source file, page/section, method, confidence, assumptions, and reviewer status. Low-confidence OCR/table parsing or ambiguous derivation is `Needs human verification`, not a confirmed fact.
 
 ### 5. Produce Review Bundle
 
-Before rendering HTML, produce a review bundle containing:
+Before rendering HTML, produce the four-file review bundle defined in `references/workspace-format.md`:
 
-- material inventory and grouping plan
-- operating context and source freshness status
-- extracted facts with citations and confidence
-- derivations with inputs, method, assumptions, and confidence
-- evidence index for screenshots, tables, charts, and document snippets
-- research findings and applicable principles
-- completeness checklist with mandatory coverage rows
-- arithmetic check with every report figure recomputed
-- narrative composition notes: customer story, evidence strength, conflicts, and observation cards
-- conflicts, missing facts, and human-verification items
-- report outline and review-pass notes
+- `record.md` — factual record with field-level citations, source register, completeness checklist with search trails
+- `analysis.md` — derivations, ownership/control by layer, consistency sweep, and the arithmetic check with every report figure recomputed
+- `composition.md` — narrative plan, observation cards, section outline, figure plan, critique-pass notes
+- `conflicts-and-gaps.md` — materiality-ordered worklist
 
 Resolve contradictions explicitly. Do not hide conflicting source evidence.
 
-If no visual evidence artifact is generated for a critical exhibit, record `No visual evidence generated` as a gap with the reason. Every absence claim must state where the analyst looked. Preserve raw specialist pass outputs as separate files or clearly marked sections; do not keep only the synthesized report.
+If no visual evidence artifact is generated for a critical exhibit, record `No visual evidence generated` as a gap with the reason. Every absence claim must state where the analyst looked. Preserve raw specialist pass outputs under marked headings in the matching bundle file; do not keep only the synthesized report.
 
 ### 6. Render Versioned HTML Report
 
@@ -134,10 +135,13 @@ Default adaptable report structure:
 4. customer understanding: identity/legal existence, relationship purpose, expected activity
 5. client-type analysis: SOW, SOF, net worth, UBO/ownership/control, plausibility, conflicts
 6. evidence exhibits: numbered figures, exhibit register, screenshots, charts, document snippets with captions
-7. regulatory grounding: applicable requirements, principles, source freshness
+7. regulatory grounding: applicable requirements, principles, source freshness; requirement evidence map when the risk module is enabled
 8. assessment observations: criterion, observed condition, evidence, review significance, limits
-9. gaps, human-verification items, review comments
-10. version history, appendix fact tables, and mandatory disclaimer
+9. draft risk assessment (only when the module is enabled per `references/risk-module.md`)
+10. gaps, human-verification items, review comments
+11. version history, appendix fact tables, and mandatory disclaimer
+
+If the operating context was incomplete and the officer directed drafting on working assumptions, the cover states the context status and the assumed frame.
 
 Focus most effort on sections 4 and 5. The body must be readable as prose before the reviewer inspects tables, and the analysis must reach triangulation and quantified residual uncertainty per `references/report-composition.md`. Use figures, ownership diagrams, cited exhibits, and compact appendices to support the narrative, not replace it.
 
@@ -151,7 +155,9 @@ Before delivery, verify:
 - every material fact cites document plus page/section plus field or line, with extraction/derivation confidence
 - each major section opens with a sourced narrative summary and names its main uncertainty
 - corroboration statements are quantified: declared amount, evidenced amount, remainder
-- every numeric claim in the report ties to `review-bundle/arithmetic-check.md`
+- every numeric claim in the report ties to the arithmetic check in `review-bundle/analysis.md`
+- no report or bundle content was generated from a case-data script; report sources cite client materials and persisted research only, never pipeline files
+- if the risk module ran: methodology is cited by file and version, every factor input cites the factual record, the draft banner and compliance-channel note are present
 - the consistency sweep is recorded and every anomaly appears in the report
 - every `not observed`, `not provided`, or `not performed` claim includes a search trail
 - conflicts and gaps are ordered by factual materiality and include amount-at-stake or affected analysis

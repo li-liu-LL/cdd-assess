@@ -6,7 +6,7 @@ Use this reference when `OPERATING_CONTEXT.md` is missing, blank, stale, or visi
 
 When the folder is empty or no case workspace exists:
 
-1. Create the minimal workspace from `references/workspace-format.md`: `OPERATING_CONTEXT.md`, `MATERIALS.md`, `source-drop/`, `client-packs/`, `unassigned/`, and `assets/`.
+1. Create the minimal workspace from `references/workspace-format.md`: `OPERATING_CONTEXT.md`, `MATERIALS.md`, `source-drop/` (with `unassigned/` inside), `knowledge/`, `client-packs/`, and `assets/`.
 2. Copy the bundled logo, watermark, template, and CSS into `assets/` if report rendering may happen in this workspace.
 3. Write an `OPERATING_CONTEXT.md` draft before asking the first question. Mark unknown values as `to confirm`, not blank.
 4. Ask the first blocking question only. Do not present a setup form unless the user asks for one.
@@ -110,6 +110,13 @@ Last updated: YYYY-MM-DD
 | Internal policies / checklists | to confirm | to confirm | |
 | Risk methodology | to confirm | to confirm | |
 | Known gaps | to confirm | to confirm | |
+
+## Report Modules
+
+| Module | Enabled | Precondition | Source / Notes |
+|---|---|---|---|
+| factual dossier | always | none | core report; cannot be disabled |
+| risk-assessment | to confirm | written risk methodology in `knowledge/supplied/` | see `references/risk-module.md`; do not enable without the methodology file |
 
 ## Presentation
 
