@@ -1,0 +1,4 @@
+interface:
+  display_name: "CDD Assess"
+  short_description: "Draft source-grounded CDD reports"
+  default_prompt: "Use $cdd-assess to organize onboarding materials, ground the review in compliance sources, and draft a versioned HTML assessment report."

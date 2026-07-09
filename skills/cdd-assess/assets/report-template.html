@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{client_type}} - {{short_customer_name}} - CDD Onboarding Assessment Report</title>
+  <link rel="stylesheet" href="./report.css">
+</head>
+<body>
+  <main class="report">
+    <img class="watermark" src="./watermark-placeholder.svg" alt="">
+
+    <header>
+      <div class="topline">
+        <img class="logo" src="./logo-placeholder.svg" alt="Firm logo">
+        <div class="classification">Internal Compliance Use Only</div>
+      </div>
+      <p class="doc-kicker">CDD Onboarding Assessment · {{client_type}} · {{version}}</p>
+      <h1>{{short_customer_name}}</h1>
+      <p class="doc-subtitle">Draft factual record and assessment observations for human compliance review.</p>
+      <div class="meta-grid">
+        <div class="metric"><span class="label">Client</span><span class="meta-value">{{client_name}}</span></div>
+        <div class="metric"><span class="label">Client Type</span><span class="meta-value">{{client_type}}</span></div>
+        <div class="metric"><span class="label">Version / Date</span><span class="meta-value">{{version}} · {{report_date}}</span></div>
+        <div class="metric"><span class="label">Jurisdiction</span><span class="meta-value">{{jurisdiction}}</span></div>
+        <div class="metric"><span class="label">Entity</span><span class="meta-value">{{represented_entity}}</span></div>
+        <div class="metric"><span class="label">Prepared By</span><span class="meta-value">{{prepared_by}}</span></div>
+        <div class="metric"><span class="label">Reviewer</span><span class="meta-value">{{reviewer}}</span></div>
+        <div class="metric"><span class="label">Materials</span><span class="meta-value">{{materials_count}}</span></div>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#brief">Reviewer Brief</a></li>
+        <li><a href="#evidence-map">Evidence Map</a></li>
+        <li><a href="#understanding">Customer Understanding</a></li>
+        <li><a href="#analysis">Client-Type Analysis</a></li>
+        <li><a href="#exhibits">Evidence Exhibits</a></li>
+        <li><a href="#regulatory">Regulatory Grounding</a></li>
+        <li><a href="#observations">Assessment Observations</a></li>
+        <li><a href="#gaps">Gaps And Human Verification Items</a></li>
+        <li><a href="#comments">Review Comments</a></li>
+        <li><a href="#versions">Version History</a></li>
+      </ol>
+    </nav>
+
+    <section id="brief">
+      <h2>1. Reviewer Brief</h2>
+      <div class="keyfigs">
+        <!-- 4-6 quantified key figures: declared net worth/net assets, corroborated amount and coverage,
+             independent vs customer-representation source counts, conflicts, verification items. -->
+        <div class="keyfig"><span class="label">{{keyfig_1_label}}</span><span class="value">{{keyfig_1_value}}</span><span class="qual">{{keyfig_1_qualifier}}</span></div>
+        <div class="keyfig"><span class="label">{{keyfig_2_label}}</span><span class="value">{{keyfig_2_value}}</span><span class="qual">{{keyfig_2_qualifier}}</span></div>
+        <div class="keyfig"><span class="label">{{keyfig_3_label}}</span><span class="value">{{keyfig_3_value}}</span><span class="qual">{{keyfig_3_qualifier}}</span></div>
+        <div class="keyfig"><span class="label">{{keyfig_4_label}}</span><span class="value">{{keyfig_4_value}}</span><span class="qual">{{keyfig_4_qualifier}}</span></div>
+        <div class="keyfig"><span class="label">{{keyfig_5_label}}</span><span class="value">{{keyfig_5_value}}</span><span class="qual">{{keyfig_5_qualifier}}</span></div>
+      </div>
+      <p>{{customer_story_narrative}}</p>
+      <p>{{main_uncertainty_narrative}}</p>
+    </section>
+
+    <section id="evidence-map">
+      <h2>2. Evidence Map</h2>
+      <p>{{evidence_map_summary}}</p>
+      <table class="evidence-table">
+        <caption>Resolvable source labels used throughout this report. Citations reference document, page/section, and field or line.</caption>
+        <thead><tr><th scope="col">ID</th><th scope="col">Source</th><th scope="col">Version / Date</th><th scope="col">Reliability</th><th scope="col">Extraction</th><th scope="col">Freshness</th></tr></thead>
+        <tbody>
+          <tr><td>S1</td><td>{{source_name}}</td><td>{{source_date}}</td><td>{{source_reliability}}</td><td>{{extraction_method}}; {{confidence}}</td><td>{{source_freshness}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="understanding">
+      <h2>3. Customer Understanding</h2>
+      <p>{{customer_understanding_narrative}}</p>
+      <h3>Identity / Legal Existence</h3>
+      <table>
+        <thead><tr><th scope="col">Field</th><th scope="col">Recorded Fact</th><th scope="col">Source</th><th scope="col">Confidence</th><th scope="col">Reviewer Status</th></tr></thead>
+        <tbody>
+          <tr><td>{{fact_field}}</td><td>{{fact_value}} <span class="citation">[S1 §1 field "{{field_name}}"]</span></td><td>{{fact_source}}</td><td>{{fact_confidence}}</td><td>{{reviewer_status}}</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Relationship Purpose And Expected Activity</h3>
+      <p>{{relationship_purpose_narrative}}</p>
+    </section>
+
+    <section id="analysis">
+      <h2>4. Client-Type Analysis</h2>
+      <p>{{client_type_analysis_summary}}</p>
+      <!-- Each subsection climbs the corroboration ladder from references/report-composition.md:
+           assertion -> field-level evidence -> triangulation/computation -> quantified residual.
+           Two to three analytical paragraphs plus a supporting table or figure per subsection. -->
+      <div class="analysis-block">
+        <h3>Source Of Wealth</h3>
+        <p>{{sow_analysis}}</p>
+      </div>
+      <div class="analysis-block">
+        <h3>Source Of Funds</h3>
+        <p>{{sof_analysis}}</p>
+      </div>
+      <div class="analysis-block">
+        <h3>Net Worth / Financial Position</h3>
+        <p>{{financial_position_analysis}}</p>
+      </div>
+      <table>
+        <thead><tr><th scope="col">Topic</th><th scope="col">Derived View</th><th scope="col">Inputs</th><th scope="col">Method / Assumptions</th><th scope="col">Confidence</th></tr></thead>
+        <tbody>
+          <tr><td>{{derivation_topic}}</td><td>{{derived_view}}</td><td>{{source_inputs}}</td><td>{{method_assumptions}}</td><td>{{derivation_confidence}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="exhibits" class="page-break-before">
+      <h2>5. Evidence Exhibits</h2>
+      <figure class="exhibit">
+        <div class="fig-head">
+          <span class="fig-num"></span>
+          <div class="fig-title">{{exhibit_headline}}</div>
+          <div class="fig-sub">{{exhibit_subtitle_units_and_scope}}</div>
+        </div>
+        <!-- Inline SVG figure, screenshot, or extracted snippet. Financial corroboration figure is
+             required; corporate reports also include an SVG ownership/control diagram. -->
+        <figcaption>
+          <span class="fig-notes"><strong>Notes:</strong> {{exhibit_reading_notes_and_limits}}</span>
+          <span class="fig-source"><strong>Source:</strong> {{exhibit_sources_with_fields}}; extraction {{method}}, confidence {{confidence}}.</span>
+        </figcaption>
+      </figure>
+      <table>
+        <caption>Exhibit register.</caption>
+        <thead><tr><th scope="col">Exhibit</th><th scope="col">Title</th><th scope="col">Sources</th><th scope="col">Artifact</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>{{exhibit_title}}</td><td>{{exhibit_sources}}</td><td>{{artifact_type}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="regulatory">
+      <h2>6. Regulatory Grounding</h2>
+      <p>{{regulatory_grounding_summary}}</p>
+      <table>
+        <thead><tr><th scope="col">Requirement / Principle</th><th scope="col">Authority</th><th scope="col">Accessed</th><th scope="col">Report Implication</th></tr></thead>
+        <tbody>
+          <tr><td>{{requirement}}</td><td>{{authority_citation}}</td><td>{{accessed_date}}</td><td>{{report_implication}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="observations" class="page-break-before">
+      <h2>7. Assessment Observations</h2>
+      <article class="observation">
+        <h3>{{observation_title}}</h3>
+        <p><span class="label">Criterion</span><span class="obs-text">{{observation_criterion}}</span></p>
+        <p><span class="label">Observed Condition</span><span class="obs-text">{{observation_condition}}</span></p>
+        <p><span class="label">Evidence</span><span class="obs-text">{{observation_evidence}}</span></p>
+        <p><span class="label">Review Significance</span><span class="obs-text">{{observation_significance}}</span></p>
+        <p><span class="label">Limits</span><span class="obs-text">{{observation_limits}}</span></p>
+      </article>
+    </section>
+
+    <section id="gaps">
+      <h2>8. Gaps And Human Verification Items</h2>
+      <table class="wide-table">
+        <thead><tr><th scope="col">ID</th><th scope="col">Item</th><th scope="col">Amount At Stake / Affected Analysis</th><th scope="col">Evidence State</th><th scope="col">Search Trail</th><th scope="col">Sources</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><td>G1</td><td>{{gap_item}}</td><td>{{amount_or_affected_analysis}}</td><td>{{gap_evidence_state}}</td><td>{{gap_search_trail}}</td><td>{{gap_sources}}</td><td class="status-gap">Needs human verification</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="comments">
+      <h2>9. Review Comments</h2>
+      <div class="comment">
+        <span class="label">Version-linked comment</span>
+        {{review_comment}}
+      </div>
+    </section>
+
+    <section id="versions">
+      <h2>10. Version History</h2>
+      <table>
+        <thead><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">Prepared By</th><th scope="col">Basis Of Change</th><th scope="col">Review Status</th></tr></thead>
+        <tbody>
+          <tr><td>{{version}}</td><td>{{report_date}}</td><td>{{prepared_by}}</td><td>{{change_basis}}</td><td>{{review_status}}</td></tr>
+        </tbody>
+      </table>
+      <!-- Optional appendix: fact tables longer than ~8 rows move here, summarized in the body. -->
+    </section>
+
+    <footer>
+      Drafted by an AI assistant for review by a qualified compliance professional. Not a regulatory determination, approval, recommendation, or instruction.
+    </footer>
+  </main>
+</body>
+</html>
