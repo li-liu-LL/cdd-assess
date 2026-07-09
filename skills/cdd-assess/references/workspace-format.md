@@ -14,7 +14,7 @@ case-workspace/
     001-individual-jane-tan/
       materials/            # normalized copies from source-drop
       extracted/            # text, tables, page refs; exhibits/ for crops and screenshots
-      review-bundle/        # exactly the four files below
+      review-bundle/        # status.md plus exactly the four analytical files below
       reports/              # versioned HTML + review-comments.md
   assets/                   # template, css, logo, watermark copied from the skill
 ```
@@ -26,14 +26,17 @@ case-workspace/
 - Record every received file in `MATERIALS.md`: original path, file name, received date if known, inferred client, status, and notes. The grouping plan lives here too; confirm it before copying files into `client-packs/*/materials/`.
 - Name client-pack folders with sequence, customer type, and short customer name: `001-individual-jane-tan`, `002-corporate-acme-pte-ltd`. Mark customer type as `individual`, `corporate`, or `unclear`; resolve `unclear` before drafting that client's report.
 - Store versioned reports as `reports/v001-individual-jane-tan-onboarding-assessment.html`, `v002-...`, etc. Reviewer notes go in `reports/review-comments.md`, one section per report version.
+- Create review-bundle starter files from `templates/record.md`, `templates/analysis.md`, `templates/composition.md`, and `templates/conflicts-and-gaps.md` when available.
+- Track workflow state in `review-bundle/status.md` using `references/state-machine.md`; create it from `templates/status.md` when available. This status file is operational metadata and does not replace the four analytical bundle files.
 - Do not rely on the final HTML as the only record; the review bundle is the durable working record.
 
 ## Review Bundle
 
-Exactly four files, created before rendering HTML:
+Four analytical files plus `status.md`; the analytical files are created before rendering HTML:
 
 ```text
 review-bundle/
+  status.md              # workflow state and blockers per references/state-machine.md
   record.md              # factual record with field-level citations; source register
                          #   (reliability, extraction, freshness); completeness checklist
                          #   with search trails on every absence row

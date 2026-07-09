@@ -12,6 +12,9 @@ It helps Claude Code, Codex, and other Agent Skills-compatible coding agents org
 - Regulatory grounding from supplied policies and primary sources
 - SOW, SOF, net worth, expected-activity, and ownership derivations
 - Arithmetic checks, consistency sweeps, citations, and search trails
+- Explicit phase completion gates, resumable state tracking, and subagent briefs
+- Review-bundle templates for consistent output shape
+- Mechanical validators for bundle structure, citations, banned language, and render checks
 - Print-friendly HTML report assets with A4 pagination
 - A strict boundary against approval, rejection, escalation, or action recommendations
 
