@@ -27,7 +27,7 @@ case-workspace/
 - Name client-pack folders with sequence, customer type, and short customer name: `001-individual-jane-tan`, `002-corporate-acme-pte-ltd`. Mark customer type as `individual`, `corporate`, or `unclear`; resolve `unclear` before drafting that client's report.
 - Store versioned reports as `reports/v001-individual-jane-tan-onboarding-assessment.html`, `v002-...`, etc. Reviewer notes go in `reports/review-comments.md`, one section per report version.
 - Create review-bundle starter files from `templates/record.md`, `templates/analysis.md`, `templates/composition.md`, and `templates/conflicts-and-gaps.md` when available.
-- Track workflow state in `review-bundle/status.md` using `references/state-machine.md`; create it from `templates/status.md` when available. This status file is operational metadata and does not replace the four analytical bundle files.
+- Track workflow state in `review-bundle/status.md` per the Case States section below; create it from `templates/status.md` when available. This status file is operational metadata and does not replace the four analytical bundle files.
 - Do not rely on the final HTML as the only record; the review bundle is the durable working record.
 
 ## Review Bundle
@@ -36,7 +36,7 @@ Four analytical files plus `status.md`; the analytical files are created before 
 
 ```text
 review-bundle/
-  status.md              # workflow state and blockers per references/state-machine.md
+  status.md              # workflow state and blockers per the Case States section below
   record.md              # factual record with field-level citations; source register
                          #   (reliability, extraction, freshness); completeness checklist
                          #   with search trails on every absence row
@@ -50,3 +50,22 @@ review-bundle/
 ```
 
 If a pass runs as a subagent, append its raw output under a clearly marked heading in the matching bundle file rather than creating new files or folders. Each fact or derivation includes: source, page or section, field name, extraction method, confidence, assumptions if any, and reviewer status. Prefer citation labels like `S1 p.1 §5 field "PEP Declaration"`, never bare document labels.
+
+## Case States
+
+Track each client pack in `review-bundle/status.md` (from `templates/status.md`) so work can be resumed, audited, and delegated across agents without losing place; update it after each phase. States advance in order. A state marked **(gate n)** advances only when that phase completion gate in `SKILL.md` is satisfied; intra-phase states advance on their own criterion:
+
+1. `intake-created` — `OPERATING_CONTEXT.md` has at least a draft
+2. `materials-inventoried` — every received file is listed in `MATERIALS.md`
+3. `grouping-confirmed` — files assigned to client packs, or ambiguity recorded in `source-drop/unassigned/`
+4. `customer-type-confirmed` — **(gate 2)**
+5. `grounding-ready` — **(gate 3)**
+6. `extraction-complete` — raw extraction preserved with source/page/field/line references and confidence
+7. `record-complete` — `record.md` has source register, factual record, and completeness checklists
+8. `analysis-complete` — `analysis.md` has derivations, consistency sweep, licensing/product/risk sections, and arithmetic check
+9. `composition-ready` — **(gates 4–5)**
+10. `html-rendered` — **(gate 6)**
+11. `render-check-passed` — render artifacts inspected per gate 7
+12. `delivered` — **(gate 7)**; set as the last workspace action immediately before sending the final response (files cannot change after it is sent)
+
+If a gate cannot be satisfied, keep the current state and record the blocker plus the exact evidence or user decision needed.

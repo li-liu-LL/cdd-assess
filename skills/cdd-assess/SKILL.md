@@ -23,11 +23,22 @@ Core behavior:
 - **Decision language is contained**: risk ratings, EDD determinations, conditions, and the recommendation live only in the executive summary and Part I, per `references/report-structure.md`; the evidence body stays neutral.
 - **Human authority signs off**: the risk rating and recommendation are drafts; the qualified compliance officer's documented approval is the decision. The report never states a customer is onboarded, approved, or rejected.
 
+## Operating Intent
+
+Everything here serves one mission: make the compliance officer's decision safe, fast, and defensible. The workflow says what to do; these principles say how to think when the instructions run out:
+
+- **Work for two readers.** A skeptical reviewer deciding today, and possibly a regulator reconstructing the file years later. If either would ask "how do you know?", the report must already answer it.
+- **The absence is the finding.** When evidence is missing, do not write less — record what is missing, where you looked, and what it blocks. A precise gap beats a smooth paragraph.
+- **Research what the materials cannot answer.** An unfamiliar registry, an entity named in a document, a licence claim, a jurisdiction quirk — verify against official sources, persist the finding, cite it. The source hierarchy applies to everything you learn, not only regulatory requirements. Researching regulators, registries, laws, and named entities' official records is always in scope; open-web adverse-media research on the customer stays opt-in.
+- **Follow the money and the control.** SOW/SOF and ownership are investigations, not transcription. Ask what a diligent investigator would ask next; if the materials cannot answer it, that question belongs in the registers.
+- **Anomalies are the job.** Checklist rows are the floor. Noticing what nobody configured — a date that cannot work, an email domain that does not match, a tenure that outruns a birthdate — is why an agent authors this report instead of a script.
+- **Effort follows materiality.** Go deepest where money, control, or regulatory exposure concentrates. Keep mandatory coverage everywhere, but do not pad low-materiality sections to look thorough.
+- **Know what is not negotiable.** Decision-language containment, officer sign-off, citation discipline, source-drop preservation, ask-first frameworks, and the authorship boundary are hard rules. Everything else is judgment in service of the mission.
+
 ## Bundled Resources
 
 - `references/operating-context-onboarding.md`: first-run concierge intake.
-- `references/workspace-format.md`: workspace, client-pack, and review-bundle layout.
-- `references/state-machine.md`: resumable case states and status tracking.
+- `references/workspace-format.md`: workspace, client-pack, and review-bundle layout; resumable case states.
 - `references/subagent-briefs.md`: specialist pass briefs and merge rules.
 - `references/cdd-concepts.md`: portable CDD methodology.
 - `references/completeness-checklists.md`: mandatory individual/corporate coverage checks.
@@ -76,7 +87,7 @@ You may create the workspace, inventory materials, and propose grouping before t
 
 ### 2. Create Or Reuse Case Workspace
 
-Read `references/workspace-format.md` and `references/state-machine.md` before creating or changing structure. Preserve the original source drop untouched.
+Read `references/workspace-format.md` before creating or changing structure. Preserve the original source drop untouched.
 
 If materials are mixed across multiple clients, infer grouping using folder names, filenames, extracted names, registration numbers, form types, and document text. Ask for confirmation before copying materials into normalized client packs. Put ambiguous files in `source-drop/unassigned/`.
 
@@ -158,6 +169,7 @@ Resolve contradictions explicitly. Do not hide conflicting source evidence. If n
 - `scripts/validate-bundle.py client-packs/*/review-bundle` passes or failures are recorded and justified.
 - Every absence claim states where the analyst looked.
 - Conflicts and gaps are ordered by factual materiality and include amount-at-stake or affected analysis.
+- The three outstanding-matters registers are populated from the assessments — including rows for incomplete CDD-form sections — and every register row traces to a gap, conflict, or checklist absence.
 - Corporate ownership maps document every intermediate entity down to natural persons with per-layer evidence status.
 - Observation cards contain criterion, observed condition, evidence, review significance, and limits.
 
