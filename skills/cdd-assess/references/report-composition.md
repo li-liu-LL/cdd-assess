@@ -63,7 +63,7 @@ The search trail belongs in the completeness checklist, conflicts/gaps table, an
 
 ## Gaps And Materiality Ordering
 
-The gaps and human-verification table is a factual worklist, not a recommendation list. Sort gaps by review materiality within each report section, with conflicts first when they affect identity, legal existence, ownership/control, SOW/SOF, expected activity, or screening integrity.
+The gaps and human-verification table is a factual worklist. Sort gaps by review materiality within each report section, with conflicts first when they affect identity, legal existence, ownership/control, SOW/SOF, expected activity, or screening integrity. Rows that require customer action feed the outstanding-matters registers, which in turn back Part I's conditions precedent — the gap table itself stays factual.
 
 Each row includes:
 
@@ -89,9 +89,9 @@ The grammatical subject of nearly every sentence is the customer, a person, a do
 
 Use neutral review language: `observed`, `not observed`, `supported by`, `not corroborated by`, `inconsistent with`, `evidence limitation`, `review significance`, `needs human verification`.
 
-Avoid decision and instruction language: `approve`, `reject`, `decline`, `escalate`, `must obtain`, `should request`, `recommended`, `condition precedent`, `next steps`, `remediate`, `acceptable`, `unacceptable`.
+Decision and instruction language — `approve`, `reject`, `decline`, `escalate`, `recommended`, `condition precedent`, `EDD required`, ratings — belongs only in the executive summary and Part I, inside decision-zone markers per `references/report-structure.md`. In the evidence body (Parts B–H), keep the neutral voice above; route the decision consequence of any finding to Part I instead of stating it in place.
 
-If an entity policy or regulatory source itself contains decision-flavored words, quote or paraphrase it only as an attributed criterion and keep the report's own voice neutral. For example, a policy phrase containing "not acceptable" may appear as a cited policy criterion, but the observation and significance fields still use `not corroborated`, `evidence limitation`, or `needs human verification`.
+If an entity policy or regulatory source itself contains decision-flavored words, quote or paraphrase it only as an attributed criterion and keep the evidence body's own voice neutral. For example, a policy phrase containing "not acceptable" may appear as a cited policy criterion, but the observation and significance fields still use `not corroborated`, `evidence limitation`, or `needs human verification`.
 
 ## Citations
 
@@ -136,7 +136,7 @@ Every intermediate entity must have its own evidence status. Every natural perso
 
 ## Observation Cards
 
-Use observation cards for assessment observations:
+Observation cards are the format of each part's closing compliance assessment — rendered in place within the part they assess, not in a separate consolidated section:
 
 - **Criterion**: internal policy, regulatory requirement, or source-grounded principle.
 - **Observed condition**: what the materials show or do not show.
@@ -144,4 +144,4 @@ Use observation cards for assessment observations:
 - **Review significance**: why it matters for customer understanding, monitoring baseline, ownership/control, SOW/SOF plausibility, or evidence quality.
 - **Limits**: evidence limitations, unresolved conflicts, stale sources, and assumptions.
 
-Do not include recommendation, decision, escalation, required action, approval, decline, or condition language.
+Observation cards carry no recommendation, decision, or condition language — they feed Part I, where the risk rating, conditions, and draft recommendation are stated per `references/risk-and-recommendation.md`.

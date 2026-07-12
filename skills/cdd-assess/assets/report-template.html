@@ -17,7 +17,7 @@
       </div>
       <p class="doc-kicker">CDD Onboarding Assessment · {{client_type}} · {{version}}</p>
       <h1>{{short_customer_name}}</h1>
-      <p class="doc-subtitle">Draft factual record and assessment observations for human compliance review.</p>
+      <p class="doc-subtitle">Onboarding assessment prepared for compliance officer review and sign-off.</p>
       <div class="meta-grid">
         <div class="metric"><span class="label">Client</span><span class="meta-value">{{client_name}}</span></div>
         <div class="metric"><span class="label">Client Type</span><span class="meta-value">{{client_type}}</span></div>
@@ -28,94 +28,317 @@
         <div class="metric"><span class="label">Reviewer</span><span class="meta-value">{{reviewer}}</span></div>
         <div class="metric"><span class="label">Materials</span><span class="meta-value">{{materials_count}}</span></div>
       </div>
+      <p class="disclaimer">Drafted by an AI assistant. The risk rating and recommendation are draft proposals requiring review and approval by a qualified compliance officer before any onboarding action. Not a regulatory determination.</p>
     </header>
 
     <nav class="toc" aria-label="Table of contents">
       <h2>Contents</h2>
       <ol>
-        <li><a href="#brief">Reviewer Brief</a></li>
-        <li><a href="#evidence-map">Evidence Map</a></li>
-        <li><a href="#understanding">Customer Understanding</a></li>
-        <li><a href="#analysis">Client-Type Analysis</a></li>
+        <li><a href="#exec-summary">Executive Compliance Summary</a></li>
+        <li><a href="#key-findings">Key Findings</a></li>
+        <li><a href="#documents">Documents Reviewed</a></li>
+        <li><a href="#evidence-quality">Evidence Quality Assessment</a></li>
+        <li><a href="#profile">Customer Profile Assessment</a></li>
+        <li><a href="#business">Nature of Business Assessment</a></li>
+        <li><a href="#ownership">Ownership and Control Assessment</a></li>
+        <li><a href="#licensing">Regulatory and Licensing Assessment</a></li>
+        <li><a href="#use-case">Intended Relationship and Product Use Case Assessment</a></li>
+        <li><a href="#sow">Source of Wealth Assessment</a></li>
+        <li><a href="#sof">Source of Funds Assessment</a></li>
+        <li><a href="#aml-controls">AML Controls Assessment</a></li>
+        <li><a href="#screening">Screening Assessment</a></li>
+        <li><a href="#doc-completeness">Documentary Completeness Assessment</a></li>
+        <li><a href="#form-completeness">CDD Form Completeness Assessment</a></li>
+        <li><a href="#reg-information">Outstanding Information Register</a></li>
+        <li><a href="#reg-documents">Outstanding Documents Register</a></li>
+        <li><a href="#reg-clarifications">Clarification Register</a></li>
+        <li><a href="#risk">Risk Assessment</a></li>
+        <li><a href="#edd">Enhanced Due Diligence Assessment</a></li>
+        <li><a href="#recommendation">Final Compliance Recommendation</a></li>
         <li><a href="#exhibits">Evidence Exhibits</a></li>
         <li><a href="#regulatory">Regulatory Grounding</a></li>
-        <li><a href="#observations">Assessment Observations</a></li>
-        <li><a href="#gaps">Gaps And Human Verification Items</a></li>
         <li><a href="#comments">Review Comments</a></li>
         <li><a href="#versions">Version History</a></li>
       </ol>
     </nav>
 
-    <section id="brief">
-      <h2>1. Reviewer Brief</h2>
+    <!-- ======================= Part A — Executive Summary ======================= -->
+    <!-- decision-zone: start -->
+    <section id="exec-summary">
+      <h2>1. Executive Compliance Summary</h2>
       <div class="keyfigs">
-        <!-- 4-6 quantified key figures: declared net worth/net assets, corroborated amount and coverage,
-             independent vs customer-representation source counts, conflicts, verification items. -->
+        <!-- 4-6 quantified key figures: corroborated amount and coverage, source counts,
+             open register items, conflicts, overall risk rating. -->
         <div class="keyfig"><span class="label">{{keyfig_1_label}}</span><span class="value">{{keyfig_1_value}}</span><span class="qual">{{keyfig_1_qualifier}}</span></div>
         <div class="keyfig"><span class="label">{{keyfig_2_label}}</span><span class="value">{{keyfig_2_value}}</span><span class="qual">{{keyfig_2_qualifier}}</span></div>
         <div class="keyfig"><span class="label">{{keyfig_3_label}}</span><span class="value">{{keyfig_3_value}}</span><span class="qual">{{keyfig_3_qualifier}}</span></div>
         <div class="keyfig"><span class="label">{{keyfig_4_label}}</span><span class="value">{{keyfig_4_value}}</span><span class="qual">{{keyfig_4_qualifier}}</span></div>
         <div class="keyfig"><span class="label">{{keyfig_5_label}}</span><span class="value">{{keyfig_5_value}}</span><span class="qual">{{keyfig_5_qualifier}}</span></div>
       </div>
-      <p>{{customer_story_narrative}}</p>
-      <p>{{main_uncertainty_narrative}}</p>
-    </section>
-
-    <section id="evidence-map">
-      <h2>2. Evidence Map</h2>
-      <p>{{evidence_map_summary}}</p>
-      <table class="evidence-table">
-        <caption>Resolvable source labels used throughout this report. Citations reference document, page/section, and field or line.</caption>
-        <thead><tr><th scope="col">ID</th><th scope="col">Source</th><th scope="col">Version / Date</th><th scope="col">Reliability</th><th scope="col">Extraction</th><th scope="col">Freshness</th></tr></thead>
+      <table>
+        <caption>Every row reconciles with the body section that derives it.</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col">Assessment</th></tr></thead>
         <tbody>
-          <tr><td>S1</td><td>{{source_name}}</td><td>{{source_date}}</td><td>{{source_reliability}}</td><td>{{extraction_method}}; {{confidence}}</td><td>{{source_freshness}}</td></tr>
+          <tr><td>Customer Name</td><td>{{client_name}}</td></tr>
+          <tr><td>Jurisdiction of Incorporation</td><td>{{jurisdiction_of_incorporation}}</td></tr>
+          <tr><td>Customer Type</td><td>{{client_type}}</td></tr>
+          <tr><td>Industry</td><td>{{industry}}</td></tr>
+          <tr><td>UBO(s) Identified</td><td>{{ubos_identified}}</td></tr>
+          <tr><td>Directors Verified</td><td>{{directors_verified}}</td></tr>
+          <tr><td>Licensing Review Completed</td><td>{{licensing_review_completed}}</td></tr>
+          <tr><td>SOW Assessment</td><td>{{sow_assessment}}</td></tr>
+          <tr><td>SOF Assessment</td><td>{{sof_assessment}}</td></tr>
+          <tr><td>AML Questionnaire Required</td><td>{{aml_questionnaire_required}}</td></tr>
+          <tr><td>Overall Risk Rating</td><td>{{overall_risk_rating}}</td></tr>
+          <tr><td>EDD Required</td><td>{{edd_required}}</td></tr>
+          <tr><td>Recommendation</td><td>{{draft_recommendation}} (draft — pending compliance officer approval)</td></tr>
         </tbody>
       </table>
     </section>
 
-    <section id="understanding">
-      <h2>3. Customer Understanding</h2>
-      <p>{{customer_understanding_narrative}}</p>
-      <h3>Identity / Legal Existence</h3>
+    <section id="key-findings">
+      <h2>2. Key Findings</h2>
+      <h3>Key Strengths</h3>
+      <p>{{key_strengths_cited}}</p>
+      <h3>Key Risks</h3>
+      <p>{{key_risks_cited}}</p>
+      <h3>Key Outstanding Items</h3>
+      <p>{{key_outstanding_items_with_register_refs}}</p>
+    </section>
+    <!-- decision-zone: end -->
+
+    <!-- ============ Part B — Information Sources and Evidence Review ============ -->
+    <section id="documents">
+      <h2>3. Documents Reviewed</h2>
+      <table class="evidence-table">
+        <caption>Resolvable source labels used throughout this report. Citations reference document, page/section, and field or line.</caption>
+        <thead><tr><th scope="col">ID</th><th scope="col">Document</th><th scope="col">Date</th><th scope="col">Status</th><th scope="col">Extraction</th><th scope="col">Freshness</th></tr></thead>
+        <tbody>
+          <tr><td>S1</td><td>{{source_name}}</td><td>{{source_date}}</td><td>{{source_status}}</td><td>{{extraction_method}}; {{confidence}}</td><td>{{source_freshness}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="evidence-quality">
+      <h2>4. Evidence Quality Assessment</h2>
+      <p>{{evidence_quality_narrative}}</p>
+      <table>
+        <thead><tr><th scope="col">Evidence Type</th><th scope="col">Reliability</th><th scope="col">Basis</th></tr></thead>
+        <tbody>
+          <tr><td>{{evidence_type}}</td><td>{{reliability_tier}}</td><td>{{reliability_basis}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== Part C — Customer Understanding Assessment ============== -->
+    <section id="profile">
+      <h2>5. Customer Profile Assessment</h2>
+      <p>{{customer_profile_narrative}}</p>
       <table>
         <thead><tr><th scope="col">Field</th><th scope="col">Recorded Fact</th><th scope="col">Source</th><th scope="col">Confidence</th><th scope="col">Reviewer Status</th></tr></thead>
         <tbody>
           <tr><td>{{fact_field}}</td><td>{{fact_value}} <span class="citation">[S1 §1 field "{{field_name}}"]</span></td><td>{{fact_source}}</td><td>{{fact_confidence}}</td><td>{{reviewer_status}}</td></tr>
         </tbody>
       </table>
-
-      <h3>Relationship Purpose And Expected Activity</h3>
-      <p>{{relationship_purpose_narrative}}</p>
     </section>
 
-    <section id="analysis">
-      <h2>4. Client-Type Analysis</h2>
-      <p>{{client_type_analysis_summary}}</p>
-      <!-- Each subsection climbs the corroboration ladder from references/report-composition.md:
-           assertion -> field-level evidence -> triangulation/computation -> quantified residual.
-           Two to three analytical paragraphs plus a supporting table or figure per subsection. -->
-      <div class="analysis-block">
-        <h3>Source Of Wealth</h3>
-        <p>{{sow_analysis}}</p>
-      </div>
-      <div class="analysis-block">
-        <h3>Source Of Funds</h3>
-        <p>{{sof_analysis}}</p>
-      </div>
-      <div class="analysis-block">
-        <h3>Net Worth / Financial Position</h3>
-        <p>{{financial_position_analysis}}</p>
-      </div>
+    <section id="business">
+      <h2>6. Nature of Business Assessment</h2>
+      <p>{{business_understanding_narrative}}</p>
       <table>
-        <thead><tr><th scope="col">Topic</th><th scope="col">Derived View</th><th scope="col">Inputs</th><th scope="col">Method / Assumptions</th><th scope="col">Confidence</th></tr></thead>
+        <thead><tr><th scope="col">Assessment Area</th><th scope="col">Result</th><th scope="col">Evidence</th></tr></thead>
         <tbody>
-          <tr><td>{{derivation_topic}}</td><td>{{derived_view}}</td><td>{{source_inputs}}</td><td>{{method_assumptions}}</td><td>{{derivation_confidence}}</td></tr>
+          <tr><td>{{business_assessment_area}}</td><td>{{business_assessment_result}}</td><td>{{business_assessment_evidence}}</td></tr>
+        </tbody>
+      </table>
+      <!-- Each part's closing compliance assessment uses the observation-card discipline, in place: -->
+      <article class="observation">
+        <h3>{{part_assessment_title}}</h3>
+        <p><span class="label">Criterion</span><span class="obs-text">{{assessment_criterion}}</span></p>
+        <p><span class="label">Observed Condition</span><span class="obs-text">{{assessment_condition}}</span></p>
+        <p><span class="label">Evidence</span><span class="obs-text">{{assessment_evidence}}</span></p>
+        <p><span class="label">Review Significance</span><span class="obs-text">{{assessment_significance}}</span></p>
+        <p><span class="label">Limits</span><span class="obs-text">{{assessment_limits}}</span></p>
+      </article>
+    </section>
+
+    <section id="ownership">
+      <h2>7. Ownership and Control Assessment</h2>
+      <p>{{ownership_control_narrative}}</p>
+      <!-- Multi-tier coverage per references/report-composition.md; corporate reports include
+           an SVG ownership/control diagram in the exhibits. -->
+      <table class="wide-table">
+        <thead><tr><th scope="col">Layer</th><th scope="col">Holder</th><th scope="col">Role</th><th scope="col">Direct %</th><th scope="col">Indirect %</th><th scope="col">Evidence</th><th scope="col">Verification Status</th></tr></thead>
+        <tbody>
+          <tr><td>{{layer}}</td><td>{{holder}}</td><td>{{role}}</td><td>{{direct_pct}}</td><td>{{indirect_pct}}</td><td>{{ownership_evidence}}</td><td>{{verification_status}}</td></tr>
+        </tbody>
+      </table>
+      <p>{{control_determination_owners_controllers_nominees_understood}}</p>
+    </section>
+
+    <!-- ============== Part D — Regulatory and Product Assessment ============== -->
+    <section id="licensing">
+      <h2>8. Regulatory and Licensing Assessment</h2>
+      <p>{{business_activity_review_narrative}}</p>
+      <table>
+        <thead><tr><th scope="col">Assessment Area</th><th scope="col">Result</th><th scope="col">Grounding</th></tr></thead>
+        <tbody>
+          <tr><td>{{licensing_assessment_area}}</td><td>{{licensing_result}}</td><td>{{licensing_grounding_citation}}</td></tr>
+        </tbody>
+      </table>
+      <p>{{licensing_gap_analysis_expected_provided_missing}}</p>
+      <p>{{regulatory_status_understanding_conclusion}}</p>
+    </section>
+
+    <section id="use-case">
+      <h2>9. Intended Relationship and Product Use Case Assessment</h2>
+      <p>{{intended_products_services_usage_narrative}}</p>
+      <table>
+        <thead><tr><th scope="col">Transaction Profile Item</th><th scope="col">Result</th><th scope="col">Source</th></tr></thead>
+        <tbody>
+          <tr><td>{{profile_item}}</td><td>{{provided_or_missing}}</td><td>{{profile_source}}</td></tr>
+        </tbody>
+      </table>
+      <p>{{commercial_rationale_and_business_model_consistency}}</p>
+    </section>
+
+    <!-- ========== Part E — Source of Wealth and Source of Funds ========== -->
+    <section id="sow">
+      <h2>10. Source of Wealth Assessment</h2>
+      <!-- Corroboration ladder per component; quantified declared/evidenced/residual amounts. -->
+      <p>{{sow_analysis}}</p>
+      <p>{{sow_conclusion_satisfactory_partial_unsatisfactory}}</p>
+    </section>
+
+    <section id="sof">
+      <h2>11. Source of Funds Assessment</h2>
+      <p>{{sof_analysis}}</p>
+      <p>{{customer_funds_determination_own_customers_third_party}}</p>
+      <table>
+        <caption>AML questionnaire trigger assessment per the entity policy in the operating context.</caption>
+        <thead><tr><th scope="col">Trigger</th><th scope="col">Result</th><th scope="col">Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>{{aml_trigger}}</td><td>{{trigger_result}}</td><td>{{trigger_evidence}}</td></tr>
+        </tbody>
+      </table>
+      <p>{{sof_adequacy_conclusion}}</p>
+    </section>
+
+    <!-- ==================== Part F — AML/CFT Assessment ==================== -->
+    <section id="aml-controls">
+      <h2>12. AML Controls Assessment</h2>
+      <!-- Applicable where customer funds, regulated business, or intermediary activity apply;
+           otherwise state not applicable with the basis. -->
+      <p>{{aml_controls_assessment_or_not_applicable}}</p>
+    </section>
+
+    <section id="screening">
+      <h2>13. Screening Assessment</h2>
+      <!-- Declarations are not screening results; apply references/report-composition.md. -->
+      <p>{{sanctions_pep_adverse_media_results_summary}}</p>
+    </section>
+
+    <!-- ============ Part G — Documentation Review and Gap Analysis ============ -->
+    <section id="doc-completeness">
+      <h2>14. Documentary Completeness Assessment</h2>
+      <table>
+        <caption>Jurisdiction-specific requirements matrix, grounded in supplied policy or persisted research.</caption>
+        <thead><tr><th scope="col">Required Document</th><th scope="col">Received</th><th scope="col">Status</th><th scope="col">Acceptable Alternative</th></tr></thead>
+        <tbody>
+          <tr><td>{{required_document}}</td><td>{{received}}</td><td>{{doc_status}}</td><td>{{acceptable_alternative}}</td></tr>
+        </tbody>
+      </table>
+      <p>{{documentary_deficiencies_missing_expired_inconsistent_refresh}}</p>
+    </section>
+
+    <section id="form-completeness">
+      <h2>15. CDD Form Completeness Assessment</h2>
+      <table>
+        <thead><tr><th scope="col">CDD Form Section</th><th scope="col">Status</th><th scope="col">Comments</th></tr></thead>
+        <tbody>
+          <tr><td>{{cdd_form_section}}</td><td>{{complete_or_incomplete}}</td><td>{{form_section_comments}}</td></tr>
         </tbody>
       </table>
     </section>
 
+    <!-- ================ Part H — Outstanding Matters Register ================ -->
+    <section id="reg-information">
+      <h2>16. Outstanding Information Register</h2>
+      <table>
+        <thead><tr><th scope="col">Ref</th><th scope="col">Information Required</th><th scope="col">Reason</th><th scope="col">Priority</th></tr></thead>
+        <tbody>
+          <tr><td>I1</td><td>{{information_required}}</td><td>{{information_reason}}</td><td>{{information_priority}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="reg-documents">
+      <h2>17. Outstanding Documents Register</h2>
+      <table>
+        <thead><tr><th scope="col">Ref</th><th scope="col">Document Required</th><th scope="col">Reason</th><th scope="col">Priority</th></tr></thead>
+        <tbody>
+          <tr><td>D1</td><td>{{document_required}}</td><td>{{document_reason}}</td><td>{{document_priority}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="reg-clarifications">
+      <h2>18. Clarification Register</h2>
+      <table>
+        <thead><tr><th scope="col">Ref</th><th scope="col">Clarification Required</th><th scope="col">Priority</th></tr></thead>
+        <tbody>
+          <tr><td>C1</td><td>{{clarification_required}}</td><td>{{clarification_priority}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============ Part I — Risk Assessment and Recommendation ============ -->
+    <!-- decision-zone: start -->
+    <section id="risk" class="page-break-before">
+      <h2>19. Risk Assessment</h2>
+      <p class="draft-banner">Draft risk rating and recommendation prepared by an AI assistant for review and approval by a qualified compliance officer. No onboarding action may be taken on this document alone.</p>
+      <p>{{methodology_line_supplied_or_default}}</p>
+      <table>
+        <thead><tr><th scope="col">Risk Factor</th><th scope="col">Rating</th><th scope="col">Rationale (cited)</th></tr></thead>
+        <tbody>
+          <tr><td>{{risk_factor}}</td><td>{{factor_rating}}</td><td>{{factor_rationale_with_citations}}</td></tr>
+        </tbody>
+      </table>
+      <p>Overall risk rating: {{overall_risk_rating}} — {{aggregation_rule_applied}}</p>
+    </section>
+
+    <section id="edd">
+      <h2>20. Enhanced Due Diligence Assessment</h2>
+      <table>
+        <thead><tr><th scope="col">EDD Trigger</th><th scope="col">Present</th><th scope="col">Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>{{edd_trigger}}</td><td>{{trigger_present}}</td><td>{{edd_trigger_evidence}}</td></tr>
+        </tbody>
+      </table>
+      <p>EDD required: {{edd_required}}</p>
+    </section>
+
+    <section id="recommendation">
+      <h2>21. Final Compliance Recommendation</h2>
+      <h3>Conditions Precedent</h3>
+      <table>
+        <caption>Every condition references an outstanding-matters register row.</caption>
+        <thead><tr><th scope="col">Condition</th><th scope="col">Register Ref</th></tr></thead>
+        <tbody>
+          <tr><td>{{condition_precedent}}</td><td>{{register_ref}}</td></tr>
+        </tbody>
+      </table>
+      <h3>Draft Recommendation</h3>
+      <p>{{draft_recommendation}} — pending review and approval by {{reviewer}}.</p>
+      <h3>Compliance Rationale</h3>
+      <p>{{rationale_business_understanding_licensing_sowsof_amlcft_risks_mitigants_basis}}</p>
+      <p class="compliance-channel">Compliance channel only — do not excerpt into client-facing or sales-facing material.</p>
+    </section>
+    <!-- decision-zone: end -->
+
+    <!-- ========================= Supporting apparatus ========================= -->
     <section id="exhibits" class="page-break-before">
-      <h2>5. Evidence Exhibits</h2>
+      <h2>22. Evidence Exhibits</h2>
       <figure class="exhibit">
         <div class="fig-head">
           <span class="fig-num"></span>
@@ -139,7 +362,7 @@
     </section>
 
     <section id="regulatory">
-      <h2>6. Regulatory Grounding</h2>
+      <h2>23. Regulatory Grounding</h2>
       <p>{{regulatory_grounding_summary}}</p>
       <table>
         <thead><tr><th scope="col">Requirement / Principle</th><th scope="col">Authority</th><th scope="col">Accessed</th><th scope="col">Report Implication</th></tr></thead>
@@ -149,35 +372,8 @@
       </table>
     </section>
 
-    <section id="observations" class="page-break-before">
-      <h2>7. Assessment Observations</h2>
-      <article class="observation">
-        <h3>{{observation_title}}</h3>
-        <p><span class="label">Criterion</span><span class="obs-text">{{observation_criterion}}</span></p>
-        <p><span class="label">Observed Condition</span><span class="obs-text">{{observation_condition}}</span></p>
-        <p><span class="label">Evidence</span><span class="obs-text">{{observation_evidence}}</span></p>
-        <p><span class="label">Review Significance</span><span class="obs-text">{{observation_significance}}</span></p>
-        <p><span class="label">Limits</span><span class="obs-text">{{observation_limits}}</span></p>
-      </article>
-    </section>
-
-    <!-- Optional: Draft Risk Assessment section, only when the risk module is enabled.
-         See references/risk-module.md for the required content: methodology line, factor
-         table (input -> methodology rule -> score, all cited), draft aggregate with
-         arithmetic, sensitivity note, draft banner, and compliance-channel note. -->
-
-    <section id="gaps">
-      <h2>8. Gaps And Human Verification Items</h2>
-      <table class="wide-table">
-        <thead><tr><th scope="col">ID</th><th scope="col">Item</th><th scope="col">Amount At Stake / Affected Analysis</th><th scope="col">Evidence State</th><th scope="col">Search Trail</th><th scope="col">Sources</th><th scope="col">Status</th></tr></thead>
-        <tbody>
-          <tr><td>G1</td><td>{{gap_item}}</td><td>{{amount_or_affected_analysis}}</td><td>{{gap_evidence_state}}</td><td>{{gap_search_trail}}</td><td>{{gap_sources}}</td><td class="status-gap">Needs human verification</td></tr>
-        </tbody>
-      </table>
-    </section>
-
     <section id="comments">
-      <h2>9. Review Comments</h2>
+      <h2>24. Review Comments</h2>
       <div class="comment">
         <span class="label">Version-linked comment</span>
         {{review_comment}}
@@ -185,7 +381,7 @@
     </section>
 
     <section id="versions">
-      <h2>10. Version History</h2>
+      <h2>25. Version History</h2>
       <table>
         <thead><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">Prepared By</th><th scope="col">Basis Of Change</th><th scope="col">Review Status</th></tr></thead>
         <tbody>
@@ -196,7 +392,7 @@
     </section>
 
     <footer>
-      Drafted by an AI assistant for review by a qualified compliance professional. Not a regulatory determination, approval, recommendation, or instruction.
+      Drafted by an AI assistant. The risk rating and recommendation are draft proposals requiring review and approval by a qualified compliance officer before any onboarding action. Not a regulatory determination.
     </footer>
   </main>
 </body>

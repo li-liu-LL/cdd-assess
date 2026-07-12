@@ -1,8 +1,8 @@
 # CDD Assess
 
-An Agent Skill for turning customer due diligence onboarding materials into source-grounded internal CDD assessment reports.
+An Agent Skill for turning customer due diligence onboarding materials into source-grounded internal CDD onboarding assessment reports: document review, gap analysis, risk assessment, and a draft recommendation in one document.
 
-It helps Claude Code, Codex, and other Agent Skills-compatible coding agents organize messy client files, build a review bundle, ground the analysis in supplied policies or official sources, and render a versioned HTML report for human compliance review.
+It helps Claude Code, Codex, and other Agent Skills-compatible coding agents organize messy client files, build a review bundle, ground the analysis in supplied policies or official sources, and render a versioned HTML report for a qualified compliance officer's review and sign-off.
 
 ## What It Covers
 
@@ -11,12 +11,14 @@ It helps Claude Code, Codex, and other Agent Skills-compatible coding agents org
 - Individual and corporate CDD factual records
 - Regulatory grounding from supplied policies and primary sources
 - SOW, SOF, net worth, expected-activity, and ownership derivations
+- Regulatory/licensing assessment and product use-case analysis
 - Arithmetic checks, consistency sweeps, citations, and search trails
+- Documentary and CDD-form gap analysis with outstanding-matters registers
+- Risk assessment (built-in default or entity-supplied methodology), EDD triggers, and a draft onboarding recommendation with conditions precedent
 - Explicit phase completion gates, resumable state tracking, and subagent briefs
 - Review-bundle templates for consistent output shape
-- Mechanical validators for bundle structure, citations, banned language, and render checks
+- Mechanical validators for bundle structure, citations, decision-language containment, and render checks
 - Print-friendly HTML report assets with A4 pagination
-- A strict boundary against approval, rejection, escalation, or action recommendations
 
 ## Installation
 
@@ -40,7 +42,7 @@ The installable skill lives in `skills/cdd-assess/`. Its `SKILL.md` is the entry
 
 ## Important Boundary
 
-CDD Assess prepares review-ready factual material. It does not make regulatory determinations, approve or decline clients, recommend escalation, set conditions, or instruct operational follow-up.
+CDD Assess prepares a complete onboarding assessment, including a draft risk rating and a draft onboarding recommendation. These are proposals only: a qualified compliance officer must review and approve them before any onboarding action, and the officer's documented sign-off is the decision. The report never states that a customer is approved, rejected, or onboarded, and decision language is mechanically confined to the executive summary and the recommendation section.
 
 Do not commit real client materials, rendered reports, or review bundles to this public repository. The `.gitignore` excludes common local testing folders such as `source-drop/`, `client-packs/`, `review-bundle/`, and `reports/`.
 

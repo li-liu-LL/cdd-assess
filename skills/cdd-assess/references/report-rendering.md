@@ -47,7 +47,7 @@ Every report carries, in addition to its sections:
 - Lead major analytical sections with sourced prose per `references/report-composition.md`. Use tables for factual records, source inventories, document gaps, SOW/SOF calculations, net worth corroboration, and UBO mapping.
 - Cite facts inline with the field-level source labels defined in `references/report-composition.md`.
 - Keep assessment observations separate from facts; render them as observation cards.
-- Do not include recommendations, decisions, action instructions, or approval language.
+- Wrap the executive summary and Part I in decision-zone markers (`<!-- decision-zone: start -->` / `<!-- decision-zone: end -->`); decision language appears nowhere outside them, verified by `scripts/check-decision-language.py`.
 
 ## Print And Accessibility Rules
 
@@ -76,18 +76,6 @@ google-chrome --headless --no-sandbox --disable-gpu --window-size=1280,2000 \
 
 Use `--no-pdf-header-footer` (or the equivalent print dialog setting) so the browser's file-path header/footer does not appear on internal reports.
 
-Inspect the PDF for: missing page numbers, truncated table columns, rendered scrollbars, a header or metadata block consuming a full page, text overlapping the watermark, unreadable figure text, mostly blank forced-break pages, and page breaks inside cards or captions. Any of these fails the render check.
+Inspect the PDF for: missing page numbers, truncated table columns, rendered scrollbars, a header or metadata block consuming a full page, text overlapping the watermark, unreadable figure text, clipped or orphaned one-word heading wraps, mostly blank forced-break pages, and page breaks inside cards or captions. Confirm the exhibit register row count equals the number of figures rendered (this count belongs in the arithmetic check). Any failure fails the render check.
 
-## Quality Checks
-
-- The report is readable when printed; the render check above passed on the actual PDF.
-- Headings, key figures, captions, and short paragraphs wrap cleanly without orphaned one-word lines or clipped text.
-- Numeric comparisons use stable tabular numerals and align consistently across tables, figures, and the key-figures band.
-- Screenshots and document crops have neutral inset outlines, nearby extracted text, captions, and field-level sources.
-- Table of contents, key-figures band, and exhibit register are present and consistent with the body; the register row count equals the number of figures rendered (this count belongs in the arithmetic check).
-- Every exhibit has source file, page/section, extraction method, and confidence, and no `Source:` line cites a script or bundle path.
-- Mandatory coverage rows appear even when the value is `not observed`.
-- The factual record remains understandable without reading appendices.
-- Major sections meet the composition standard: narrative that reaches triangulation and residual uncertainty, not only tables.
-- Observation cards have criterion, observed condition, evidence, review significance, and limits.
-- The disclaimer appears on the cover and final page.
+Content-quality criteria live in the phase completion gates in `SKILL.md` and `references/final-self-check.md` — this file governs presentation and print behavior only.

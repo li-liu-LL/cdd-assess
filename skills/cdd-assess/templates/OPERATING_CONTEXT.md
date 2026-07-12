@@ -35,7 +35,12 @@ Last updated: YYYY-MM-DD
 |---|---|---|---|
 | Source drop path | source-drop/ | assumed | default workspace path |
 | Internal policies / checklists | to confirm | to confirm | |
-| Risk methodology | to confirm | to confirm | |
+| CDD/onboarding form name and sections | account purpose; product selection; transaction profile; withdrawal limits; SOW/SOF; directors; authorised representatives; authorised platform users; declaration and sign-off | assumed | default section list — replace with the entity's actual form |
+| Entity products/services offered | to confirm | to confirm | drives product use-case assessment |
+| AML questionnaire policy | to confirm | to confirm | ask the user; built-in triggers only on explicit instruction |
+| Risk methodology | to confirm | to confirm | ask the user; built-in default only on explicit instruction; see `references/risk-and-recommendation.md` |
+| SOW/SOF rating criteria | to confirm | to confirm | ask the user; built-in criteria only on explicit instruction |
+| Adverse-media web research | disabled | assumed | agent web research runs only when explicitly enabled; results labelled `agent web research`, never screening-system results |
 | Known gaps | to confirm | to confirm | |
 
 ## Report Modules
@@ -43,7 +48,7 @@ Last updated: YYYY-MM-DD
 | Module | Enabled | Precondition | Source / Notes |
 |---|---|---|---|
 | factual dossier | always | none | core report; cannot be disabled |
-| risk-assessment | to confirm | written risk methodology in `knowledge/supplied/` | see `references/risk-module.md` |
+| risk assessment and recommendation | always | none | draft for compliance sign-off; see `references/risk-and-recommendation.md` |
 
 ## Presentation
 

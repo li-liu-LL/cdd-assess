@@ -7,6 +7,25 @@
 - Main uncertainties:
 - Key figures:
 
+## Executive Summary Plan
+
+| Summary Row | Value | Derived From Section | Reconciled |
+|---|---|---|---|
+
+- Key strengths (each cited):
+- Key risks (each cited):
+- Key outstanding items (register refs):
+
+## Recommendation Rationale Plan
+
+- Business understanding sufficiency:
+- Regulatory and licensing outcome:
+- SOW/SOF adequacy:
+- AML/CFT considerations:
+- Outstanding risks and mitigants:
+- Basis for draft recommendation:
+- Conditions precedent (register refs):
+
 ## Section Outline
 
 1. 
@@ -18,7 +37,9 @@
 
 ## Observation Cards
 
-### OC1 — [short title]
+One card per part's closing compliance assessment; each card names its target part.
+
+### OC1 — [Part/section] — [short title]
 
 - **Criterion:**
 - **Observed condition:**
