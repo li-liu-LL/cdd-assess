@@ -1,6 +1,6 @@
 # Subagent Briefs
 
-Use these briefs when the runtime supports subagents. If it does not, run the same passes sequentially and preserve the same outputs. The lead agent owns final synthesis and report authorship.
+Use these briefs when the runtime supports and permits subagents. If it does not, run the same passes sequentially and preserve the same outputs. The lead agent owns final synthesis and report authorship.
 
 ## Merge Rules
 

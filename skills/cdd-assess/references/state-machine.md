@@ -19,7 +19,7 @@ A client pack moves through these states in order. Each state belongs to a SKILL
 | 9 | `composition-ready` | 4–5 (gates) | `composition.md` contains narrative plan, observation cards, figure plan, and critique notes; the "specialist passes complete" and "bundle ready" gates are satisfied. |
 | 10 | `html-rendered` | 6. Report (gate) | Versioned HTML exists in `reports/` and the "report rendered" gate is satisfied. |
 | 11 | `render-check-passed` | 7. Delivery | PDF and screenshot render checks were inspected. |
-| 12 | `delivered` | 7. Delivery (gate) | Final response gave report path, bundle path, quality status, and unresolved limitations per the "delivered" gate. |
+| 12 | `delivered` | 7. Delivery (gate) | The final response satisfying the "delivered" gate is fully prepared; set this state as the last workspace action immediately before sending it (files cannot be changed after the response is sent). |
 
 ## Status File
 

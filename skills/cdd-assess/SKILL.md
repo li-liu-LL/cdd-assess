@@ -112,7 +112,7 @@ If grounding is missing or stale, browse primary/high-trust sources. Persist eac
 
 ### 4. Run Specialist Passes
 
-Read `references/subagent-briefs.md`. Use subagents when supported; otherwise run the same passes sequentially. Preserve raw pass outputs in the review bundle.
+Read `references/subagent-briefs.md`. Use subagents when the runtime supports and permits them; otherwise run the same passes sequentially. Preserve raw pass outputs in the review bundle.
 
 Required passes:
 
@@ -188,5 +188,5 @@ Run the render check in `references/report-rendering.md` or `scripts/render-chec
 
 - Render-check artifacts were inspected for page numbers, table fit, watermark overlap, figure readability, blank pages, and broken cards/captions.
 - `references/final-self-check.md` passes or unresolved failures are listed for human verification.
-- `review-bundle/status.md` is advanced to `delivered` only after the final response is sent.
+- `review-bundle/status.md` is advanced to `delivered` as the last workspace action, immediately before sending the final response.
 - Final response follows the contract in `references/final-self-check.md`.
