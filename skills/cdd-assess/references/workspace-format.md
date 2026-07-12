@@ -45,7 +45,8 @@ review-bundle/
                          #   formulae, and outputs of the mechanical recomputation)
   composition.md         # narrative plan: customer story, evidence strength, observation
                          #   cards, section outline, figure plan, critique-pass notes
-  conflicts-and-gaps.md  # materiality-ordered worklist per references/report-composition.md
+  conflicts-and-gaps.md  # materiality-ordered worklist plus outstanding information/
+                         #   documents/clarification registers per references/report-composition.md
 ```
 
 If a pass runs as a subagent, append its raw output under a clearly marked heading in the matching bundle file rather than creating new files or folders. Each fact or derivation includes: source, page or section, field name, extraction method, confidence, assumptions if any, and reviewer status. Prefer citation labels like `S1 p.1 §5 field "PEP Declaration"`, never bare document labels.

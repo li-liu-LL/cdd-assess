@@ -47,7 +47,7 @@ Every report carries, in addition to its sections:
 - Lead major analytical sections with sourced prose per `references/report-composition.md`. Use tables for factual records, source inventories, document gaps, SOW/SOF calculations, net worth corroboration, and UBO mapping.
 - Cite facts inline with the field-level source labels defined in `references/report-composition.md`.
 - Keep assessment observations separate from facts; render them as observation cards.
-- Do not include recommendations, decisions, action instructions, or approval language.
+- Wrap the executive summary and Part I in decision-zone markers (`<!-- decision-zone: start -->` / `<!-- decision-zone: end -->`); decision language appears nowhere outside them, verified by `scripts/check-decision-language.py`.
 
 ## Print And Accessibility Rules
 

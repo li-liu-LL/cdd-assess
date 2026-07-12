@@ -18,7 +18,12 @@ Use this reference before rendering HTML. Include every mandatory row in the rev
 | Gap materiality | conflicts/gaps table includes amount-at-stake or affected-analysis column and is ordered by factual materiality |
 | Document freshness | expiry dates and dated-document age where extractable |
 | Evidence artifacts | visual artifact present, or explicit `No visual evidence generated` gap |
-| No decision language | no approval, rejection, escalation, condition, or action recommendation |
+| Licensing review | regulated-activity categories assessed with grounded calls; licences provided/valid/verified status; licensing gap analysis |
+| Product use case | intended products, transaction profile, commercial rationale, consistency with business model |
+| Customer funds | own / customers' / third-party determination and AML questionnaire trigger results |
+| CDD form completeness | every form section reviewed complete/incomplete; incomplete sections carry register rows |
+| Outstanding registers | information, documents, and clarification registers populated, each row tracing to a gap or absence |
+| Decision containment | decision language only inside executive-summary and Part I decision zones; `check-decision-language.py` passes |
 
 ## Individual Reports
 

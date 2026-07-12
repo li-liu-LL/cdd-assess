@@ -25,7 +25,8 @@ Ask in this order, stopping as soon as the next step can proceed:
 | 3 | Is this one client or a mixed source drop? | If filenames show multiple names or IDs, treat as mixed and propose a grouping plan for confirmation. | copying into client packs |
 | 4 | Who is the compliance reviewer or preparer for the report metadata? | If unknown, use `to confirm` and continue with analysis, but keep report rendering blocked. | final report rendering |
 | 5 | What internal policies, checklists, or knowledge packs apply? | Use supplied files first; if none are provided, proceed with official-source research and record the entity-policy gap. | entity-policy observations |
-| 6 | What source freshness policy and report style requirements apply? | Use conservative defaults: source freshness `to confirm`, audience `internal compliance`, classification `Internal Compliance Use Only`. | final report rendering |
+| 6 | What risk methodology and rating criteria apply? | Ask for the entity's written framework; use the built-in defaults only if the user explicitly instructs, and disclose that in the report. | risk assessment, executive-summary ratings, and recommendation drafting |
+| 7 | What source freshness policy and report style requirements apply? | Use conservative defaults: source freshness `to confirm`, audience `internal compliance`, classification `Internal Compliance Use Only`. | final report rendering |
 
 ## Blocking Rules
 
@@ -108,7 +109,12 @@ Last updated: YYYY-MM-DD
 |---|---|---|---|
 | Source drop path | source-drop/ | assumed | default workspace path |
 | Internal policies / checklists | to confirm | to confirm | |
-| Risk methodology | to confirm | to confirm | |
+| CDD/onboarding form name and sections | account purpose; product selection; transaction profile; withdrawal limits; SOW/SOF; directors; authorised representatives; authorised platform users; declaration and sign-off | assumed | default section list — replace with the entity's actual form |
+| Entity products/services offered | to confirm | to confirm | drives product use-case assessment |
+| AML questionnaire policy | to confirm | to confirm | ask; built-in triggers only on explicit instruction |
+| Risk methodology | to confirm | to confirm | ask; built-in default only on explicit instruction |
+| SOW/SOF rating criteria | to confirm | to confirm | ask; built-in criteria only on explicit instruction |
+| Adverse-media web research | disabled | assumed | enable only by explicit user instruction |
 | Known gaps | to confirm | to confirm | |
 
 ## Report Modules
@@ -116,7 +122,7 @@ Last updated: YYYY-MM-DD
 | Module | Enabled | Precondition | Source / Notes |
 |---|---|---|---|
 | factual dossier | always | none | core report; cannot be disabled |
-| risk-assessment | to confirm | written risk methodology in `knowledge/supplied/` | see `references/risk-module.md`; do not enable without the methodology file |
+| risk assessment and recommendation | always | none | draft for compliance sign-off; see `references/risk-and-recommendation.md` |
 
 ## Presentation
 

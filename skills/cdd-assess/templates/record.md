@@ -37,6 +37,13 @@ Evidence:
 | Topic | Observed Value | Result Type | Source/Search Trail | Confidence | Status |
 |---|---|---|---|---|---|
 
+## CDD Form Completeness
+
+One row per section of the entity's CDD form (form name per `OPERATING_CONTEXT.md`).
+
+| CDD Form Section | Status | Comments | Register Ref |
+|---|---|---|---|
+
 ## Completeness Checklist
 
 | Requirement | Observed Value | Search Trail | Sources | Status |

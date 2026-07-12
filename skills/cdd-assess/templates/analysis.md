@@ -25,10 +25,52 @@
 | Input | Value | Source | Computation | Result | Confidence | Limits |
 |---|---:|---|---|---|---|---|
 
+## Licensing Assessment
+
+| Regulated Activity Category | Indicators Observed | Grounding (Policy/Research) | Licence Provided | Licence Valid | Independently Verified | Status |
+|---|---|---|---|---|---|---|
+
+## Product Use Case And Transaction Profile
+
+| Item | Value | Source | Provided/Missing | Consistency With Business Model | Notes |
+|---|---|---|---|---|---|
+
+## Customer Funds And AML Questionnaire Triggers
+
+| Trigger | Observed Condition | Evidence | Result |
+|---|---|---|---|
+| Receives customer funds | | | |
+| Acts as intermediary | | | |
+| Holds customer assets | | | |
+
+AML questionnaire required: to determine
+
 ## Consistency Sweep
 
 | Check | Sources Compared | Outcome | Conflict/Gaps ID | Notes |
 |---|---|---|---|---|
+
+## Risk Assessment
+
+Methodology: built-in default / supplied ({file, version})
+
+| Factor | Rating | Input Facts (Citations) | Rule Applied | Confidence |
+|---|---|---|---|---|
+
+Overall rating: to determine (show aggregation in arithmetic check)
+
+## EDD Triggers
+
+| Trigger | Present | Evidence |
+|---|---|---|
+| PEP exposure | | |
+| High-risk jurisdiction | | |
+| Customer funds | | |
+| Virtual asset activities | | |
+| Licensing concerns | | |
+| Complex ownership | | |
+
+EDD required: to determine
 
 ## Arithmetic check
 

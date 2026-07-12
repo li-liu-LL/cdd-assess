@@ -38,6 +38,22 @@ Append raw output to: `knowledge/research/*.md` using `references/research-findi
 
 Required: requirement, citation, access date, jurisdiction, interpretation, report implication, uncertainty, and limits.
 
+## Licensing Assessment Pass
+
+Mission: assess whether the customer's activities may constitute regulated activities (payment services, money transmission, e-money, virtual asset services, custody, remittance, financial advisory, other) and whether licences are evidenced. Ground every category call in supplied policy or persisted research, never memory.
+
+Append output to: `review-bundle/analysis.md` under `## Licensing Assessment`.
+
+Required per category: indicators observed with citations, grounding reference, licence provided/valid/independently verified status, and the licensing gap analysis (expected, provided, missing, clarifications routed to the registers).
+
+## Product Use-Case Pass
+
+Mission: assess the intended relationship, product usage, transaction profile, and commercial rationale against the customer's stated business model, using the entity's CDD form and product set from `OPERATING_CONTEXT.md`.
+
+Append output to: `review-bundle/analysis.md` under `## Product Use Case And Transaction Profile` and `## Customer Funds And AML Questionnaire Triggers`.
+
+Required: intended products/services, wallet/fiat/crypto usage, transaction profile items marked provided/missing, commercial rationale, customer funds determination (own / customers' / third-party), and AML questionnaire trigger results.
+
 ## Derivation Pass
 
 Mission: derive SOW, SOF, net worth/financial position, expected activity plausibility, and UBO/ownership/control maps.
@@ -86,19 +102,17 @@ Append output to: `review-bundle/composition.md` — reviewer brief plan, sectio
 
 Required per paragraph-plan row: claim, strongest evidence, computation/triangulation, residual/limit, citations. Observation cards carry criterion, observed condition, evidence, review significance, and limits. The lead agent reviews every claim against the bundle before it enters report HTML.
 
-## Risk Module Pass
+## Risk And Recommendation Pass
 
-Only when enabled per the activation gate in `references/risk-module.md`.
+Mission: apply `references/risk-and-recommendation.md` — score each factor from the factual record (supplied methodology first, built-in default otherwise), assess EDD triggers, generate conditions precedent from register rows, and draft the recommendation with its rationale.
 
-Mission: score strictly under the supplied methodology, factor by factor, from the factual record.
+Append output to: `review-bundle/analysis.md` under `## Risk Assessment` and `## EDD Triggers`; rationale and conditions to `review-bundle/composition.md` under `## Recommendation Rationale Plan`.
 
-Append output to: `review-bundle/analysis.md` under `## Risk Module Pass`; the report section it feeds is defined in `references/risk-module.md`.
-
-Required: methodology name/version/citation, factor table with field-level input citations and rule citations, aggregate arithmetic (included in the arithmetic check), sensitivity note, unscorable factors with search trails. No decision or action language.
+Required: methodology identification (default or supplied file/version), factor table with field-level input citations, aggregation arithmetic (included in the arithmetic check), EDD trigger table, exactly one recommendation option, every condition referencing a register ref, unscorable factors with search trails. All output is draft for compliance sign-off.
 
 ## Report Critique Pass
 
-Mission: critique the draft report for completeness, clarity, neutrality, evidence design, and banned decision/action language.
+Mission: critique the draft report for completeness, clarity, evidence design, decision-language containment (decision terms only inside the executive summary and Part I decision zones), executive-summary reconciliation with the body, and conditions tracing to register refs.
 
 Append output to: `review-bundle/composition.md` under `## Report Critique Pass`.
 

@@ -5,10 +5,15 @@ import sys
 from pathlib import Path
 
 REQUIRED = {
-    "record.md": ["# Factual Record", "## Source Register", "## Completeness Checklist"],
-    "analysis.md": ["# Analysis", "## Consistency Sweep", "## Arithmetic check"],
-    "composition.md": ["# Composition Plan", "## Observation Cards", "## Figure And Exhibit Plan"],
-    "conflicts-and-gaps.md": ["# Conflicts And Gaps"],
+    "record.md": ["# Factual Record", "## Source Register", "## CDD Form Completeness",
+                  "## Completeness Checklist"],
+    "analysis.md": ["# Analysis", "## Licensing Assessment", "## Consistency Sweep",
+                    "## Risk Assessment", "## EDD Triggers", "## Arithmetic check"],
+    "composition.md": ["# Composition Plan", "## Executive Summary Plan",
+                       "## Observation Cards", "## Figure And Exhibit Plan",
+                       "## Recommendation Rationale Plan"],
+    "conflicts-and-gaps.md": ["# Conflicts And Gaps", "## Outstanding Information Register",
+                              "## Outstanding Documents Register", "## Clarification Register"],
 }
 
 
