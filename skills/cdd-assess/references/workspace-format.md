@@ -16,6 +16,7 @@ case-workspace/
       extracted/            # text, tables, page refs; exhibits/ for crops and screenshots
       review-bundle/        # status.md plus exactly the four analytical files below
       reports/              # versioned HTML + review-comments.md
+      actions/              # post-review RFI drafts owned by the cdd-draft-rfi skill
   assets/                   # template, css, logo, watermark copied from the skill
 ```
 
@@ -29,6 +30,7 @@ case-workspace/
 - Create review-bundle starter files from `templates/record.md`, `templates/analysis.md`, `templates/composition.md`, and `templates/conflicts-and-gaps.md` when available.
 - Track workflow state in `review-bundle/status.md` per the Case States section below; create it from `templates/status.md` when available. This status file is operational metadata and does not replace the four analytical bundle files.
 - Do not rely on the final HTML as the only record; the review bundle is the durable working record.
+- Keep post-review RFI artifacts under `actions/`. They do not alter the delivered report or analytical bundle unless a client response is formally introduced as new evidence and a new report version is created.
 
 ## Review Bundle
 

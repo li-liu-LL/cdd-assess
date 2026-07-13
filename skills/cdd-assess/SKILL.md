@@ -202,3 +202,7 @@ Run the render check in `references/report-rendering.md` or `scripts/render-chec
 - `references/final-self-check.md` passes or unresolved failures are listed for human verification.
 - `review-bundle/status.md` is advanced to `delivered` as the last workspace action, immediately before sending the final response.
 - Final response follows the contract in `references/final-self-check.md`.
+
+## Post-Review Follow-Up
+
+Delivery is not approval. After a qualified compliance officer records their review disposition and approves specific outstanding matters for client follow-up, use the separate `cdd-draft-rfi` skill to prepare the RFI email draft and request schedule. Do not infer follow-up approval from the draft report recommendation, and do not send client communications from this skill.

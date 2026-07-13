@@ -1,0 +1,4 @@
+interface:
+  display_name: "CDD Draft RFI"
+  short_description: "Draft reviewed client information requests"
+  default_prompt: "Use $cdd-draft-rfi to turn officer-approved outstanding matters into a client-ready RFI email draft."
